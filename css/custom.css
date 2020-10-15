@@ -1,0 +1,50 @@
+body{
+  word-wrap: break-word;
+  background-color:#00587a;
+  font-family:Georgia;
+}
+nav{
+  background-color:#0f3057;
+}
+.row{
+  background-color:#fff;
+}
+td,th{
+  border:solid 1px #eee;
+  text-align:center;
+}
+th{
+  background-color:darkslategray;
+  color:#fff;
+}
+.col{
+  margin-bottom:20px;
+}
+img{
+  margin:0 auto;
+}
+.alcaramel{
+  background-color:lightyellow;
+}
+footer{
+  padding:15px;
+  background-color:#213e3b;
+  color:#fff;
+}
+.menuajax{
+  cursor:pointer;
+}
+a:hover{
+  color:darkseagreen;
+}
+select{
+  display:block;
+}
+.loader{
+  margin:10px 0;
+  padding:20px 0;
+  color:lightsalmon;
+}
+.bloktabel{
+  overflow:auto;
+}
