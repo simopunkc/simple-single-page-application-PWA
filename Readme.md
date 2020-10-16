@@ -1,7 +1,8 @@
 # Simple Single Page Application (SPA)
-## feature
+## features
 * Progressive Web App (PWA)
 * Indexed DB Promise
+* Materialize
 * Workbox
 
 ## Usage
