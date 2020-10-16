@@ -1,4 +1,7 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.0.0-alpha.3/workbox-sw.js');
+importScripts('/workbox/workboxsw.js');
+workbox.setConfig({
+    modulePathPrefix: '/workbox/workbox-v5.1.4/'
+});
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 workbox.precaching.precacheAndRoute([
     '/favicon.ico',
@@ -22,6 +25,8 @@ workbox.precaching.precacheAndRoute([
     '/pages/jadwaltim.html'
 ]);
 import {StaleWhileRevalidate} from 'workbox-strategies';
+import {CacheFirst} from 'workbox-strategies';
+import {CacheableResponse} from 'workbox-cacheable-response';
 workbox.routing.registerRoute(
     new RegExp('/pages/'),
     new StaleWhileRevalidate({
@@ -30,7 +35,7 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
     /\.(?:html|png|ico|jpg|jpeg|css|eot|json|ttf|woff|woff2|scss)$/,
-    new workbox.strategies.CacheFirst({
+    new CacheFirst({
         cacheName: 'statik',
         plugins: [
           new workbox.expiration.ExpirationPlugin({
@@ -51,7 +56,7 @@ workbox.routing.registerRoute(
     new StaleWhileRevalidate({
         cacheName: 'apiexternal',
         plugins: [
-            new workbox.cacheableResponse.CacheableResponsePlugin({
+            new CacheableResponse({
                 statuses: [0, 200],
             }),
             new workbox.expiration.ExpirationPlugin({
@@ -61,7 +66,8 @@ workbox.routing.registerRoute(
         ],
     })
 );
-self.skipWaiting();
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 self.addEventListener('push', function(event){
     var body;
     if(event.data){

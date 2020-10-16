@@ -21,10 +21,5 @@
     "mini-css-extract-plugin": "^0.11.3",
     "web-push": "^3.4.4"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simopunkc/simple-single-page-application-PWA.git"
-  },
-  "homepage": "https://simopunkc.github.io/simple-single-page-application-PWA",
   "description": ""
 }
