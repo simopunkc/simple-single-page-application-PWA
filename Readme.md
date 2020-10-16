@@ -1,6 +1,6 @@
 # Simple Single Page Application (SPA)
 ## feature
-* Progressive Web Applicationn (PWA)
+* Progressive Web App (PWA)
 * Indexed DB Promise
 * Workbox
 
