@@ -1,6 +1,6 @@
-importScripts('/workbox/workboxsw.js');
+importScripts('/workbox/workbox-sw.js');
 workbox.setConfig({
-    modulePathPrefix: '/workbox/workbox-v5.1.4/'
+    modulePathPrefix: '/workbox/'
 });
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 workbox.precaching.precacheAndRoute([
