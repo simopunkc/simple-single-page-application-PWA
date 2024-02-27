@@ -1,4 +1,4 @@
-# Simple Single Page Application (SPA) https://pasuh.com
+# Simple Single Page Application (SPA)
 ## features
 * Progressive Web App (PWA)
 * Indexed DB Promise
