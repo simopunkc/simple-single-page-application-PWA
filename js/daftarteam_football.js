@@ -24,7 +24,7 @@ function apiDaftarTeam(id_liga,token_liga){
         return Promise.resolve(JSON.parse(hasil.value));
     })
     .catch(async (db)=>{
-        let hasil=await fetch(`https://api.football-data.org/v2/competitions/${id_liga}/teams`, {
+        let hasil=await fetch(`https://api.football-data.org/v4/competitions/${id_liga}/teams`, {
             method: 'GET',
             headers: {
             'X-Auth-Token': token_liga
