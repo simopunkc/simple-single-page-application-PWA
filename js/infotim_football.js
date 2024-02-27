@@ -40,7 +40,7 @@ function apiInforteamFootball(id_tim,token_liga){
         return Promise.resolve(JSON.parse(hasil.value));
     })
     .catch(async (db)=>{
-        let hasil=await fetch(`https://api.football-data.org/v2/teams/${id_tim}`, {
+        let hasil=await fetch(`https://api.football-data.org/v4/teams/${id_tim}`, {
             method: 'GET',
             headers: {
             'X-Auth-Token': token_liga
