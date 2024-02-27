@@ -1,7 +1,7 @@
-const path=require('path');
-const MiniCssExtractPlugin=require('mini-css-extract-plugin');
-const {InjectManifest}=require('workbox-webpack-plugin');
-const config={
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { InjectManifest } = require('workbox-webpack-plugin');
+const config = {
     mode: "production",
     entry: [
         './js/ajax_xhr.js',
@@ -26,14 +26,13 @@ const config={
         rules: [
             {
                 test: /\.(?:css)$/,
-                use: [MiniCssExtractPlugin.loader,"css-loader"]
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
             }
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'bundle.css',
-            allChunks: true
+            filename: 'bundle.css'
         }),
         new InjectManifest({
             swSrc: './swori.js',
@@ -41,4 +40,4 @@ const config={
         })
     ]
 }
-module.exports=config
+module.exports = config
